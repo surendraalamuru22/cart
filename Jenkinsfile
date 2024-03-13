@@ -42,5 +42,11 @@ pipeline {
           echo 'prepare artifact'
        }
      }
+     stage ('publish artifact') {
+       when { tag "*" }
+         steps {
+               echo 'publish artifact'
+         }
+     }
    }
 }
