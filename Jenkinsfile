@@ -24,6 +24,12 @@ pipeline {
           echo 'unit tests'
        }
      }
+     stage ('download dependencies') {
+         when { tag "*" }
+           steps {
+               echo 'download dependencies'
+           }
+     }
      stage ('prepare artifact') {
       when { tag "*" }
        steps {
