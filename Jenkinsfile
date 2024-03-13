@@ -19,6 +19,7 @@ pipeline {
        }
      }
      stage ('prepare artifact') {
+      when { tag "*" }
        steps {
           echo 'prepare artifact'
        }
