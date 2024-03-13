@@ -8,5 +8,10 @@ pipeline {
           echo 'code quality'
        }
      }
+     stage ('lint checks') {
+            steps {
+               echo 'lint checks'
+            }
+          }
    }
 }
