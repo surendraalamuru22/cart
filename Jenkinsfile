@@ -9,11 +9,17 @@ pipeline {
        }
      }
      stage ('lint checks') {
+      when {
+              branch 'main'
+      }
        steps {
            echo 'lint checks'
        }
      }
      stage ('unit tests') {
+      when {
+            branch 'main'
+      }
        steps {
           echo 'unit tests'
        }
