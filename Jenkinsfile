@@ -18,7 +18,7 @@ pipeline {
           echo 'unit tests'
        }
      }
-     stage ('prepare artifact) {
+     stage ('prepare artifact') {
        steps {
           echo 'prepare artifact'
        }
