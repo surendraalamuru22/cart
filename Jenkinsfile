@@ -10,7 +10,10 @@ pipeline {
      }
      stage ('lint checks') {
       when {
-              branch 'main'
+              anyOf {
+                 branch 'main'
+                 tag "*"
+              }
       }
        steps {
            echo 'lint checks'
@@ -18,7 +21,10 @@ pipeline {
      }
      stage ('unit tests') {
       when {
-            branch 'main'
+            anyOf {
+               branch 'main'
+               tag "*"
+            }
       }
        steps {
           echo 'unit tests'
